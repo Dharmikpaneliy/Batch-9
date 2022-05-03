@@ -1,7 +1,7 @@
 import React from 'react';
 
 function App(props) {
-    let arrdata = 
+    const arrdata = 
     [
         {
             id: 101,
@@ -45,14 +45,41 @@ function App(props) {
           }
     ];
     
-    console.log(arrdata.map((i) => {return i}));  //map
+    arrdata.map((value,index) => console.log(value.id,value.name,value.quantity,value.price,value.expiry,value.status));
 
-    console.log(arrdata.filter((g) => {return g.expiry >= 2022}));  //filter
+    let ans = 
+            arrdata.filter((d,i) => d.expiry >= 2022)
+            .reduce((acc,d,i) => acc + d.price,0);
+
 
     return (
-        <div>
-            {/* <h1>Hello</h1> */}
-        </div>
+      <>
+        <table border="1">
+          <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Quantity</td>
+            <td>price</td>
+            <td>expiry</td>
+            <td>Total</td>
+          </tr>
+          {
+            arrdata.map((value,index) => 
+            {
+              return(
+                <tr>
+                  <td>{value.id}</td>
+                  <td>{value.name}</td>
+                  <td>{value.quantity}</td>
+                  <td>{value.price}</td>
+                  <td>{value.expiry}</td>
+                  {index === 0?<td rowspan={arrdata.length}>{ans}</td>:null}
+                </tr>
+              )
+            })
+          }
+        </table>
+      </>
     );
 }
 
