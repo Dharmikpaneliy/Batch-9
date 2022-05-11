@@ -1,6 +1,8 @@
 import React from 'react';
+import Branch from './containers/country/Branch';
 import Cityfun from './containers/country/Cityfun';
 import CountryFun from './containers/country/countryFun';
+import Time from './DT/Time';
 
 function App(props) {
   
@@ -8,9 +10,11 @@ function App(props) {
     return (
     <>
       
-    <CountryFun />
+    {/* <CountryFun />
     <Cityfun />
+    <Branch /> */}
 
+    <Time />
 
     </>
   );
