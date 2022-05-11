@@ -1,4 +1,5 @@
 import React from 'react';
+import Cityfun from './containers/country/Cityfun';
 import CountryFun from './containers/country/countryFun';
 
 function App(props) {
@@ -8,6 +9,7 @@ function App(props) {
     <>
       
     <CountryFun />
+    <Cityfun />
 
 
     </>

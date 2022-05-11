@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Cityfun from './Cityfun';
 
 function CountryFun(props) {
 
@@ -16,6 +17,8 @@ function CountryFun(props) {
 
             <p>GDP:{gdp}</p>
             <button onClick = {() => setGDP(6.5)}>Change GDP</button>
+
+            <Cityfun fampla = {Country}/>
         </div>
     );
 }
