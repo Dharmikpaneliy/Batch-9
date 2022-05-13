@@ -16,7 +16,9 @@ function App(props) {
   let orgData = [
     {id: 101, name:"Amit"},
     {id: 102, name:"Kevin"},
-    {id: 103, name:"Piyush"}
+    {id: 103, name:"Piyush"},
+    {id: 104, name:"Dharmik"},
+    {id: 105, name:"Kuldip"}
   ]
 
   useEffect(
